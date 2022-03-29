@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "f85d1e75-48fd-4ca9-924b-1ff54e693e4a",
+		"name": "guesty-bulk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/bulk",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"endpoint\": {\n        \"url\": \"https://guesty-user-service.herokuapp.com/user/{userId}\",\n        \"method\": \"PUT\"\n    },\n    \"payload\": [\n        {\n            \"pathParams\": {\n                \"userId\": \"14\"\n            },\n            \"body\": {\n                    \"age\": 30\n                }\n        },\n        {\n            \"pathParams\": {\n                \"userId\": \"29\"\n            },\n            \"body\": {\n                    \"age\": 30\n                }\n        },\n        {\n            \"pathParams\": {\n                \"userId\": \"103\"\n            },\n            \"body\": {\n                    \"age\": 30\n                }\n        }      \n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bulk",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
